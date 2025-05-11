@@ -4,7 +4,7 @@ import pyarrow.flight as flight
 import pyarrow.parquet as parquet
 
 class FlightServer(flight.FlightServerBase):
-    def __init__(self, location="gprc://0.0.0.0:8815", repo=pathlib.Path("./datasets"), **kwargs):
+    def __init__(self, location="grpc://0.0.0.0:8815", repo=pathlib.Path("./datasets"), **kwargs):
         super(FlightServer, self).__init__(location, **kwargs)
         self._location = location
         self._repo = repo
